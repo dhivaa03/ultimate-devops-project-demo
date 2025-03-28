@@ -319,4 +319,9 @@ func createClient(ctx context.Context, svcAddr string) (*grpc.ClientConn, error)
 
 
 
+{
 
+	type ProductCatalogClient struct {
+		conn *grpc.ClientConn
+		client pb.ProductCatalogServiceClient
+}
