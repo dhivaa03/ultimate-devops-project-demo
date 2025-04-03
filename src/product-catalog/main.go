@@ -298,7 +298,7 @@ func (p *productCatalog) SearchProducts(ctx context.Context, req *pb.SearchProdu
 }
 
 func (p *productCatalog) checkProductFailure(ctx context.Context, id string) bool {
-	if id != "OLJCESPC7Z" {
+	if id != "OLJCESPC7ZEEBRA" {
 		return false
 	}
 
@@ -315,8 +315,3 @@ func createClient(ctx context.Context, svcAddr string) (*grpc.ClientConn, error)
 		grpc.WithStatsHandler(otelgrpc.NewClientHandler()),
 	)
 }
-
-
-
-
-
