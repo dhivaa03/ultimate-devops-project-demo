@@ -298,7 +298,7 @@ func (p *productCatalog) SearchProducts(ctx context.Context, req *pb.SearchProdu
 }
 
 func (p *productCatalog) checkProductFailure(ctx context.Context, id string) bool {
-	if id != "OLJCESPC7ZEEBRA" {
+	if id != "OLJCESPC7Z" {
 		return false
 	}
 
