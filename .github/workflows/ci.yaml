@@ -21,12 +21,15 @@ jobs:
 
         - name: Grant execute permission for gradlew
           run: chmod +x gradlew
+          working-directory: .
 
         - name: Build with Gradle
           run: ./gradlew build --no-daemon
+          working-directory: ad
 
         - name: Run Unit Tests
           run: ./gradlew test --no-daemon
+          working-directory: ad
 
     code-quality:
         runs-on: ubuntu-latest
@@ -43,9 +46,11 @@ jobs:
 
         - name: Grant execute permission for gradlew
           run: chmod +x gradlew
+          working-directory: .
 
         - name: Run Checkstyle
           run: ./gradlew checkstyleMain --no-daemon
+          working-directory: ad
 
     docker:
         runs-on: ubuntu-latest
